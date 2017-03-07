@@ -6,7 +6,7 @@ made a few tweak to the theme including :
 - some minor changes to the styles 
 - removed useless words 
 
-## example
+## Example
 ![example](./example.png)
 
 # JSON-Resume-Paper (readme from the original file)

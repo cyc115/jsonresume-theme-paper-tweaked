@@ -1,4 +1,15 @@
-# JSON-Resume-Paper
+#Changes
+made a few tweak to the theme including : 
+
+- removed location section
+- moved education and skills section to the top of the page
+- some minor changes to the styles 
+- removed useless words 
+
+## example
+![example](./example.png)
+
+# JSON-Resume-Paper (readme from the original file)
 
 This is a theme for [JSON Resume](http://jsonresume.org/).
 It is available via npm:

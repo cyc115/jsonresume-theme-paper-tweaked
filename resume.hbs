@@ -102,44 +102,6 @@
             {{/foreach}}
           {{/if}}
 
-
-          {{#resume.basics}}
-          <!-- LOCATION -->
-          {{#location}}
-            {{#ifCond address '||' city}}
-              <section class="content">
-                <div class="row">
-                  <div class="content-cat">
-                    Location
-                  </div>
-                  <div class="content-text">
-                    {{#if address}}
-                      <ul>
-                        <li>Address</li>
-                        <li>{{address}}</li>
-                      </ul>
-                    {{/if}}
-                    {{#if city}}
-                      {{#if postalCode}}
-                        <ul>
-                          <li>Postal Code & City</li>
-                          <li>{{postalCode}} {{city}}</li>
-                        </ul>
-                      {{/if}}
-                    {{/if}}
-                    {{#if region}}
-                      <ul>
-                        <li>Region</li>
-                        <li>{{region}}</li>
-                      </ul>
-                    {{/if}}
-                  </div>
-                </div>
-              </section>
-            {{/ifCond}}
-          {{/location}}
-          
-      {{/resume.basics}}
         <!-- LANGUAGE -->
           {{#if resume.languages.length}}
             <section class="content">

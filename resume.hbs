@@ -82,18 +82,20 @@
                     </div>
                     <div class="content-text work-listing education-listing">
                       {{#if institution}}
-                        <p class="heading" >{{institution}}</p>
-                      {{/if}}
-                      {{#if area}}
-                        {{#if gpa}}
-                        <p class="highlight">
-                          {{#if studyType}}
-                          {{studyType}}:
+                      <ul>
+                        <li class="heading" >{{institution}}</li>
+                        {{#if area}}
+                          {{#if gpa}}
+                            {{#if studyType}}
+                            
+                            {{/if}}
+                            <li>{{studyType}}: {{area}} ({{gpa}})</li>
+                          </p>
                           {{/if}}
-                          <i>{{area}} ({{gpa}})</i>
-                        </p>
                         {{/if}}
+                      </ul>
                       {{/if}}
+
                     </div>
                   </div>
                 </section>

@@ -57,6 +57,53 @@
               </div>
             </div>
           </section>
+          {{/resume.basics}}
+{{!--Education --}}
+          
+          {{#if resume.education.length}}
+            {{#foreach resume.education}}
+              {{#if $first}}
+                <section class="content">
+              {{else}}
+                <section class="content education-content">
+              {{/if}}
+                  <div class="row">
+                    <div class="content-cat big-text">
+                      {{#if $first}}
+                        Education
+                      {{/if}}
+                      {{#if startDate}}
+                        {{#if endDate}}
+                          <p>{{startDate}} till {{endDate}}</p>
+                        {{/if}}
+                      {{/if}}
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                      {{#if institution}}
+                        {{#if $first}}
+                          <p class="heading" style="margin-top:2.35em;">{{institution}}</p>
+                        {{else}}
+                          <p class="heading">{{institution}}</p>
+                        {{/if}}
+                      {{/if}}
+                      {{#if area}}
+                        {{#if gpa}}
+                        <p class="highlight">
+                          {{#if studyType}}
+                          {{studyType}}:
+                          {{/if}}
+                          <i>{{area}} ({{gpa}})</i>
+                        </p>
+                        {{/if}}
+                      {{/if}}
+                    </div>
+                  </div>
+                </section>
+            {{/foreach}}
+          {{/if}}
+
+
+          {{#resume.basics}}
           <!-- LOCATION -->
           {{#location}}
             {{#ifCond address '||' city}}
@@ -91,6 +138,7 @@
               </section>
             {{/ifCond}}
           {{/location}}
+          
       {{/resume.basics}}
         <!-- LANGUAGE -->
           {{#if resume.languages.length}}
@@ -219,47 +267,6 @@
                 </div>
               </section>
             {{/each}}
-          {{/if}}
-          {{#if resume.education.length}}
-            {{#foreach resume.education}}
-              {{#if $first}}
-                <section class="content">
-              {{else}}
-                <section class="content education-content">
-              {{/if}}
-                  <div class="row">
-                    <div class="content-cat big-text">
-                      {{#if $first}}
-                        Education
-                      {{/if}}
-                      {{#if startDate}}
-                        {{#if endDate}}
-                          <p>{{startDate}} till {{endDate}}</p>
-                        {{/if}}
-                      {{/if}}
-                    </div>
-                    <div class="content-text work-listing education-listing">
-                      {{#if institution}}
-                        {{#if $first}}
-                          <p class="heading" style="margin-top:2.35em;">{{institution}}</p>
-                        {{else}}
-                          <p class="heading">{{institution}}</p>
-                        {{/if}}
-                      {{/if}}
-                      {{#if area}}
-                        {{#if gpa}}
-                        <p class="highlight">
-                          {{#if studyType}}
-                          {{studyType}}:
-                          {{/if}}
-                          <i>{{area}} ({{gpa}})</i>
-                        </p>
-                        {{/if}}
-                      {{/if}}
-                    </div>
-                  </div>
-                </section>
-            {{/foreach}}
           {{/if}}
           {{#if resume.awards.length}}
             {{#foreach resume.awards}}

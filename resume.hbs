@@ -7,6 +7,7 @@
   <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,700' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
   <style>{{{css}}}</style>
+  <style>{{{print}}}</style> 
   <style media="print">{{{print}}}</style>
 </head>
 <body>
@@ -74,17 +75,14 @@
                       {{/if}}
                       {{#if startDate}}
                         {{#if endDate}}
-                          <p>{{startDate}} till {{endDate}}</p>
+                          <p>{{startDate}}</p>
+                          <p>{{endDate}}</p>
                         {{/if}}
                       {{/if}}
                     </div>
                     <div class="content-text work-listing education-listing">
                       {{#if institution}}
-                        {{#if $first}}
-                          <p class="heading" style="margin-top:2.35em;">{{institution}}</p>
-                        {{else}}
-                          <p class="heading">{{institution}}</p>
-                        {{/if}}
+                        <p class="heading" >{{institution}}</p>
                       {{/if}}
                       {{#if area}}
                         {{#if gpa}}
@@ -163,14 +161,15 @@
                       {{/if}}
                       {{#if startDate}}
                         {{#if endDate}}
-                          <p>{{startDate}} till {{endDate}}</p>
+                          <p>{{startDate}}</p>
+                          <p>{{endDate}}</p>
                         {{/if}}
                       {{/if}}
                     </div>
                     <div class="content-text work-listing education-listing">
                       {{#ifCond company '||' position}}
                         {{#if $first}}
-                          <p style="margin-top:2.4em;">
+                          <p>
                         {{else}}
                           <p>
                         {{/if}}

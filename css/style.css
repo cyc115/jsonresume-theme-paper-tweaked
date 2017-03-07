@@ -29,8 +29,7 @@ header {
   width:100%;
   vertical-align: middle;
   text-align: center;
- 
-}
+  }
 
 .header-content {
   display: inline-block;
@@ -246,7 +245,7 @@ div.content-text.work-listing.education-listing > p:nth-child(2) {
   
   color: #424242;
   
-  margin-left:3.25em;
+  margin-left:3em;
   padding-left:0.5em;
   
   border-left:1px solid #e0e0e0;
@@ -261,7 +260,7 @@ div.content-text.work-listing.education-listing > p:nth-child(2) {
 }
 
 .education-listing > .highlight {
-  margin-left:3.25em;
+  margin-left:3em;
 }
 
 .highlight {
